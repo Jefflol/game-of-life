@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Game of Life</title>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <div class="instructions-container">
+      <h2>Instructions:</h2>
+      <p>
+        <span>Select cells to place cells</span>
+        <br>
+        <span>[1] to select color blue</span>
+        <span>[2] to select color red</span>
+        <span>[spacebar] to run ticks</span>
+      </p>
+      <p>
+        <br>
+        <span>1. Any live cell with fewer than two live neighbors dies, as if by underpopulation.</span>
+        <br>
+        <span>2. Any live cell with two or three live neighbors lives on to the next generation.</span>
+        <br>
+        <span>3. Any live cell with more than three live neighbors dies, as if by overpopulation.</span>
+        <br>
+        <span>4. Any dead cell with exactly three live neighbors becomes a live cell, as if by reproduction.</span>
+        <br>
+      </p>
+    </div>
+    <div class="buttons-container">
+      <h2>Speed run ticks:</h2>
+      <button id="run-10">Run 10 times</button>
+      <button id="run-25">Run 25 times</button>
+      <button id="run-50">Run 50 times</button>
+    </div>
+    <div class="container">
+      <h1>Game of Life</h1>
+      <canvas id="gol"></canvas>
+    </div>
+    <script src="gol.js"></script>
+  </body>
+</html>
