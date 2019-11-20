@@ -1,42 +1,112 @@
-html, body {
+body {
   font-family: "Courier New", Courier, monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  height: 80%;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  background-color: #EEEEEE;
 }
 
-.container {
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.instructions {
+  align-self: flex-start;
+  width: 300px;
+  margin: 75px 40px 0 40px;
+}
+
+.canvas {
   width: 500px;
-  height: 500px;
-  margin: 0 auto;
+}
+#gol:hover {
+  cursor: pointer;
 }
 
-.instructions-container {
-  float: left;
+.options {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-start;
   width: 300px;
-  padding: 40px;
-  margin-top: 40px;
+  margin: 75px 40px 0 40px;
 }
 
-.buttons-container {
-  float: right;
-  width: 300px;
-  padding: 40px;
-  margin-top: 40px;
+.options h2 {
+  text-align: center;
 }
 
-button {
+.options__ticks {
+  margin-bottom: 25px;
+}
+
+.options__current-selection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.button {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
   display: block;
   width: 250px;
-  margin-top: 25px;
   padding: 10px;
-  border-radius: 10px;
-  border-width: 2px;
+  border-radius: 5px;
+  border: 2px solid rgba(34, 40, 49, 0.3);
+  margin-top: 25px;
+  background-color: rgba(141, 161, 185, 1);
+  -webkit-transition: .2s;
+  transition: all .2s;
 }
 
-h1 {
+.button:hover,
+.button:focus {
+  outline: none;
+  background-color: rgba(141, 161, 185, 0.6);
+  border: 2px solid rgba(34, 40, 49, 0.4);
+  cursor: pointer;
+}
+
+#selectionDisplay {
+  width: 50px;
+  height: 50px;
+}
+
+.title {
   text-align: center;
 }
 
 span {
   display: block;
+}
+
+
+@media screen and (min-width: 1500px) {
+  .main {
+    width: 1500px;
+  }
+
+  .canvas {
+    margin: 0 50px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  body {
+    width: 1200px;
+  }
+
+  .instructions,
+  .options {
+    margin: 75px 20px 0 20px;
+  }
 }
